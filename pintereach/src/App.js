@@ -1,6 +1,8 @@
 import React from 'react';
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import SignUpForm from './components/SignUp';
+
 import './App.css';
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
       <header className="App-header">
         <h1>Connected...</h1>
       </header>
+      <SignUpForm />
     </div>
   );
 }
