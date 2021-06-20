@@ -11,7 +11,7 @@ const initialValues = {
 
 function SignUpForm(props) {
     // const { push } = useHistory()
-    const [credentials, setCredentials] = useState(initialValues)
+    const [credentials, setCredentials] = useState(initialValues);
 
     const handleChange = e => {
         setCredentials({
@@ -22,20 +22,22 @@ function SignUpForm(props) {
 
     const handleSubmit = e => {
         e.preventDefault()
+        console.log("SUBMIT TRIGGERING")
+        console.log(credentials)
         // Insert end point for axios.post request
-        axios.post("INSERT END POINT", credentials)
-            .then(res => {
-                console.log("Axios Login Post Request ", res)
+        // axios.post("INSERT END POINT", credentials)
+        //     .then(res => {
+        //         console.log("Axios Login Post Request ", res)
                 // localStorage.setItem('user_id', res.data.user.user_id)
                 // localStorage.setItem('username', res.data.user.username)
                 // localStorage.setItem('email', res.data.user.email)
                 // localStorage.setItem('token', res.data.token)                        
                 // setCredentials({})
                 // push('/DETERMINE PATH & COMPONENT TO ROUTE TO AFTER SIGNUP OR LOGIN')
-            })
-            .catch(err => {
-                console.log(err)
-            })        
+            // })
+            // .catch(err => {
+            //     console.log(err)
+            // })        
         }
 
     return (
@@ -56,8 +58,8 @@ function SignUpForm(props) {
                             <input type="password" name="password" id="password" onChange={handleChange} placeholder="Password"/>
                         </div>
                     </div>
-                </form>
                 <button>Sign up</button>
+                </form>
             </div>
     )
 }
@@ -70,4 +72,4 @@ function SignUpForm(props) {
 // }
 
 // export default connect(mapStateToProps)(SignUpForm);
-export default (SignUpForm);
+export default SignUpForm;
