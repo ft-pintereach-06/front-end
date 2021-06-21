@@ -6,6 +6,7 @@ import PrivateRoute from './components/PrivateRoute';
 import SignUpForm from './components/SignUp';
 import Login from './components/Login';
 import Homepage from './components/Homepage';
+import ArticleForm from './components/ArticleForm';
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/home' component={Homepage}/>
           <Route path ='/signup' component={SignUpForm}/>
           <Route exact path='/' component={Login} />
+          <Route path ='/form' component={ArticleForm} />
         </Switch>
       </div>
     </Router>
