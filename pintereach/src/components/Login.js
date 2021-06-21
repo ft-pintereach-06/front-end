@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-// import { connect } from 'react-redux'
-import { useHistory } from 'react-router-dom'
-// import { axiosWithAuth } from '../utils/AxiosWithAuth'
+import React, { useState } from 'react';
+// import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+// import { axiosWithAuth } from '../utils/AxiosWithAuth';
+import { StyledLoginForm } from '../styled-components/StyledForm';
 
 function Login(props) {
     let { push } = useHistory()
@@ -51,24 +52,26 @@ function Login(props) {
     }
 
     return (
-            <div className="container">
-                <form>
-                    <h2>Log in</h2>
-                    <div className="form-content">
-                        <label>Username: </label>
-                        <div>
-                            <input type="text" name="username" value={credentials.username} onChange={handleChange} placeholder="Name"/>
-                        </div>
+            <StyledLoginForm>
+                <div className="container">
+                    <form>
+                        <h2>Log in</h2>
+                        <div className="form-content">
+                            <label>Username: </label>
+                            <div>
+                                <input type="text" name="username" value={credentials.username} onChange={handleChange} placeholder="Name"/>
+                            </div>
 
-                        <label>Password: </label>
-                        <div>
-                            <input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password"/>
+                            <label>Password: </label>
+                            <div>
+                                <input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password"/>
+                            </div>
+                            <button onClick={handleLoginClick}>Log in</button>
+                            <button onClick={handleRegisterClick}>Register</button>
                         </div>
-                        <button onClick={handleLoginClick}>Log in</button>
-                        <button onClick={handleRegisterClick}>Register</button>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
+            </StyledLoginForm>
     )
 }
 
