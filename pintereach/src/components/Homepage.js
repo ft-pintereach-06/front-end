@@ -1,8 +1,5 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-
-import ArticleList from './ArticleList';
-
 import ArticleList from './ArticleList';
 
 function Homepage() {
@@ -16,10 +13,10 @@ function Homepage() {
 
     return (
         <div>
-           <h1>Article Board</h1> 
-        <ArticleList />
+            <button onClick={handleFormClick}>Add Article</button>
+            <h1>Article Board</h1> 
+            <ArticleList />
         </div>
     )
 }
-
 export default Homepage;

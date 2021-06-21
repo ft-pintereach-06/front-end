@@ -1,6 +1,5 @@
 import React from 'react';
-
-// import ArticleCard from './ArticleCard.js';
+import ArticleForm from './ArticleForm';
 
 function ArticleList(props) {
     // const { articles } = props;
@@ -9,7 +8,7 @@ function ArticleList(props) {
 
     return (
         <div>
-            <h3>ARTICLE LIST</h3>
+            {/* <ArticleForm /> */}
             {/* articles.map(article => <ArticleCard key={article.id} article={article}) */}
         </div>
     )
