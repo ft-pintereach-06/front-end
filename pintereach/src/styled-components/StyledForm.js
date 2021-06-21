@@ -5,7 +5,7 @@ const StyledForm = styled.div`
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     color: #ffffff; 
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -20,14 +20,22 @@ const StyledForm = styled.div`
     }
 
     form {
-        background: #FFFFFF;
+        background: rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
         padding: 2em;
         padding-bottom: 3em;
-        border-radius: 10px;
         width: 550px;
+        height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
     }
 
     .form-content {
@@ -75,7 +83,7 @@ const StyledForm = styled.div`
         display: block;
       
         &:hover {
-            background-color: #434862;
+            background-color: #fdbb2d;
             color: #ffffff;
             transition: all .4s ease-in-out;
         }

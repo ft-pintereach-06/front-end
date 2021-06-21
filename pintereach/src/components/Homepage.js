@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 
 import ArticleList from './ArticleList';
 
+import ArticleList from './ArticleList';
+
 function Homepage() {
 
     let { push } = useHistory()
@@ -14,7 +16,6 @@ function Homepage() {
 
     return (
         <div>
-            <button onClick={handleFormClick}>Add Article</button>
            <h1>Article Board</h1> 
         <ArticleList />
         </div>
