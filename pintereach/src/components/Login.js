@@ -42,6 +42,7 @@ function Login(props) {
     //     .catch(err => {
     //         console.log(err.message)
     //     })
+    
     }
 
     const handleRegisterClick = e => {
