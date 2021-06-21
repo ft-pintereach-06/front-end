@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Homepage() {
+
+    let { push } = useHistory()
+
+    const handleFormClick = e => {
+        e.preventDefault()
+        push('/form')
+    }
+
     return (
         <div>
-           <h1>Homepage Connected</h1> 
+           <button onClick={handleFormClick}>Add Article</button>
         </div>
     )
 }
