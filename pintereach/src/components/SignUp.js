@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux'
-// import { useHistory } from 'react-router'
+// import { connect } from 'react-redux'
+import { useHistory } from 'react-router'
 import axios from 'axios';
 
 const initialValues = {
@@ -10,7 +10,7 @@ const initialValues = {
 }
 
 function SignUpForm(props) {
-    // const { push } = useHistory()
+    const { push } = useHistory()
     const [credentials, setCredentials] = useState(initialValues);
 
     const handleChange = e => {
@@ -24,6 +24,7 @@ function SignUpForm(props) {
         e.preventDefault()
         console.log("SUBMIT TRIGGERING")
         console.log(credentials)
+        push('/home')
         // Insert end point for axios.post request
         // axios.post("INSERT END POINT", credentials)
         //     .then(res => {
