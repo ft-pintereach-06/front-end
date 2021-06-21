@@ -1,7 +1,29 @@
 import React from 'react';
 import { StyledLoginForm } from '../styled-components/StyledForm';
+import { useHistory } from 'react-router';
+
+// TO DO
+    // set up validation to not allow form to be submitted if fields are empty
+
 
 export default function ArticleForm(props) {
+
+    let { push } = useHistory();
+
+    const handleSaveClick = e => {
+        e.preventDefault();
+        push('/home')
+        // axios.post('INSERT AXIOS END POINT')
+        //     .then(res => {
+        //         console.log(res)
+        //         // CREATE addArticle FUNCTION > VERIFY IF res.data IS APPROPRIATE
+        //         addArticle(res.data);
+        //         push('/home');
+        //     })
+        //     .catch(err => {
+        //         console.log(err);
+        //     })
+    }
 
     return (
         <div className='container'>
@@ -44,7 +66,7 @@ export default function ArticleForm(props) {
                             </div>
 
                         <div>
-                        <button>Save</button>
+                        <button onClick={handleSaveClick}>Save</button>
                         </div>
                     </div>
                 </form>
