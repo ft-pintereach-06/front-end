@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 // import { connect } from 'react-redux'
-// import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 // import { axiosWithAuth } from '../utils/AxiosWithAuth'
 
 function Login(props) {
-    // let { push } = useHistory()
+    let { push } = useHistory()
     const [credentials, setCredentials] = useState({
         username: '',
         password: '',
@@ -23,6 +23,7 @@ function Login(props) {
         e.preventDefault()
         console.log("SUBMIT TRIGGERING")
         console.log(credentials)
+        push('/home')
         // axiosWithAuth().post('INSERT END POINT', credentials)
         // .then(res => {
             // localStorage.setItem('token', res.data.token)
@@ -45,7 +46,7 @@ function Login(props) {
 
     const handleRegisterClick = e => {
         e.preventDefault()
-        // push('/SignUp')
+        push('/SignUp')
     }
 
     return (
