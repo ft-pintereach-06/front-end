@@ -1,6 +1,7 @@
 import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_ARTICLE, SET_ERROR } from './../actions/index';
 
 export const initialState = {
+    credentials: {},
     articles: [],
     isLoading: false,
     errorMessage: ''
