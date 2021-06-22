@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavBar from './components/NavBar';
 
 import PrivateRoute from './components/PrivateRoute';
 
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
+          <NavBar />      
           <h1>Pintereach</h1>
         </header>
         <Switch>
