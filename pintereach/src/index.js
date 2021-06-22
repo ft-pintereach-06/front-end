@@ -5,10 +5,17 @@ import ReactDOM from 'react-dom';
 // import logger from 'redux-logger';
 // import thunk from 'redux-thunk';
 
-
-
 import './index.css';
 import App from './App';
+
+// const store = createStore(reducer, applyMiddleware(thunk, logger));
+
+  // ReactDOM.render(
+  //     <Provider store={store}>
+  //         <App />
+  //     </Provider>, 
+  //     document.getElementById("root")
+  // );
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,4 +23,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 

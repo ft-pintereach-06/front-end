@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-// import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-// import { axiosWithAuth } from '../utils/AxiosWithAuth';
 import { StyledLoginForm } from '../styled-components/StyledForm';
+// import { connect } from 'react-redux';
+// import { axiosWithAuth } from '../utils/AxiosWithAuth';
 
 function Login(props) {
     let { push } = useHistory()

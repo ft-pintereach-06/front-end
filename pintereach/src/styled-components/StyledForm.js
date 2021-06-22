@@ -68,6 +68,18 @@ const StyledForm = styled.div`
         }
     }
 
+    select {
+        background: #e8eeef;
+        color: #323232;
+        border: none;
+        border-radius: 5px;
+        padding: 1em;
+        margin-top: .25em;
+        margin-bottom: .5em;
+        width: 82%;
+        
+    }
+
     button {
         font-weight: 600;
         text-align: center;

@@ -13,8 +13,12 @@ function Homepage() {
 
     return (
         <div>
+            <br></br>
+            <br></br>
             <button onClick={handleFormClick}>Add Article</button>
+            {/* <p>------------------------------------------</p> */}
             <h1>Article Board</h1> 
+             
             <ArticleList />
         </div>
     )
