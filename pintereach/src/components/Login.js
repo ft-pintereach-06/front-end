@@ -3,13 +3,14 @@ import { useHistory } from 'react-router-dom';
 import { StyledLoginForm } from '../styled-components/StyledForm';
 import { connect } from 'react-redux';
 import axiosWithAuth from '../utils/AxiosWithAuth';
+import { loginSuccessful } from '../actions/index';
 
 
 function Login(props) {
     let { push } = useHistory()
     const [credentials, setCredentials] = useState({
         username: '',
-        password: '',
+        password: ''
     })
 
 
@@ -24,17 +25,20 @@ function Login(props) {
 
     const handleLoginClick = e => {
         e.preventDefault()
-        console.log("SUBMIT TRIGGERING")
         console.log(credentials)
         // push('/home')
         axiosWithAuth()
             .post('/api/auth/login', credentials)
             .then(res => {
-                console.log(res)
-                // localStorage.setItem('token', res.data.token)
-                // axiosWithAuth().get('/api/articles/:id')
-                // console.log(res)
-                // .then(res => {
+                console.log("Axios Login Post: ", res)
+                localStorage.setItem('token', res.data.token)
+                console.log("Local Storage Token: ", localStorage.token)
+                push('/home')
+                // axiosWithAuth()
+                //     .get('/api/articles/:id')
+                //     console.log(res)
+                //     .then(res => {
+                //         console.log(res)
                 //     props.loginSuccess(res.data)
                 //     localStorage.setItem('user_id', res.data.user_id)
                 //     localStorage.setItem('username', res.data.username)
@@ -43,14 +47,11 @@ function Login(props) {
             .catch(err => {
                 console.log(err)
             })
-            push('/home')
+            // push('/home')
         }
         // .catch(err => {
         //     console.log(err.message)
-        // })
     
-    
-
     const handleRegisterClick = e => {
         e.preventDefault()
         push('/SignUp')
@@ -80,14 +81,12 @@ function Login(props) {
     )
 }
 
-
 const mapStateToProps = state => {
     return {
         credentials: state.credentials,
-        isFetching: state.isFetching,
+        isLoading: state.isLoading,
         error: state.error
     }
 }
 
-export default connect(mapStateToProps)(Login);
-// export default Login;
+export default connect(mapStateToProps, { loginSuccessful })(Login);
