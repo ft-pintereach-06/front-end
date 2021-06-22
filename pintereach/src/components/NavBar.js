@@ -17,6 +17,14 @@ const StyledNavBar = styled.nav`
 const StyledTitle = styled(Link)`
     color: white;
     text-decoration: none;
+    background: red;
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5vw;
 `
 
 const StyledLinks = styled(Link)`
