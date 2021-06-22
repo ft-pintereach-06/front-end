@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Article from './Article';
+import fetchArticlesService from '../services/fetchArticlesService';
 
 function ArticleList(props) {
     // const { articles } = props;
 
-    // useEffect on mount?
+    // useEffect on mount
+    // useEffect(() => {
+    //     fetchArticlesService().then((res) => {
+    //     setArticles(res)
+    //     })
+    // }, []);
 
     return (
         <div>

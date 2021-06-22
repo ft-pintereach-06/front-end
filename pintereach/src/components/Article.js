@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import { StyledArticleCard } from '../styled-components/StyledArticle';
 
 // TO DO
     // Build deleteArticle function 
@@ -31,19 +32,22 @@ function Article(props) {
 
     return (
         <div>
-        {/* <h3>{article.title}</h3>
-        <p><b>URL:</b> {article.url}</p>
-        <p><b>Category:</b> {article.category}</p>
-        <p><b>Importance:</b> {article.importance}</p> */}
-       
-        <h3>Article Title</h3>
-        <p><b>URL:</b> </p>
-        <p><b>Category:</b> </p>
-        <p><b>Importance:</b> </p>
+            <StyledArticleCard>
+                <div className="ArticleContainer">
+                    {/* <h2>{article.title}</h2>
+                    <p><a href={article.url}>{article.url}</a></p>
+                    <p><b>Category:</b> {article.category}</p>
+                    <p><b>Importance:</b> {article.importance}</p> */}
 
-        <button onClick={handleDeleteClick}>Delete Article</button>
-        <p>=========================================</p>
+                    {/* <p><b>ArticleTitle:</b>  Clinical Research Trial</p> */}
+                    <h2>Clinical Research Trial</h2>
+                    <p><a href="www.clinicaltrials.org">www.clinicaltrials.org</a></p>
+                    <p><b>Category:</b> Clinical Research</p>
+                    <p><b>Importance:</b> Medium</p>
 
+                    <button onClick={handleDeleteClick}>Delete Article</button>
+                </div>  
+            </StyledArticleCard>
         </div>
     )
 }
