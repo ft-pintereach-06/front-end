@@ -32,9 +32,14 @@ const StyledArticle = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        position: relative;
         /* backdrop-filter: blur(12px); */
         box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        width: 100%;
+        object-fit: scale;
+        flex-shrink: 2;
     }
 
     a {
