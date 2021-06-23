@@ -30,9 +30,7 @@ const reducer = (state = initialState, action) => {
         case ADD_ARTICLE:
                 const newArticle = {
                     ...action.payload,
-                    // id: Date.now()
                 }
-
                 return {
                 ...state,
                 articles: [...state.articles, newArticle]
@@ -53,12 +51,11 @@ const reducer = (state = initialState, action) => {
         //         ...state,
         //         articles: [...state.articles, action.payload]
         //         // articles: [action.payload]
-
         //     }
         case DELETE_ARTICLE:
             return {
                 ...state,
-                articles: state.articles.filter(item=>(action.payload !== item.id))
+                articles: state.articles.filter(article=>(action.payload !== article.article_id))
             }
         default: 
             return state;

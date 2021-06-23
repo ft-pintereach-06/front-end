@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux'
 import { useHistory } from 'react-router'
-// import axios from 'axios';
 import axiosWithAuth from '../utils/AxiosWithAuth';
 import { StyledLoginForm } from '../styled-components/StyledForm';
 
@@ -30,28 +29,12 @@ function SignUpForm(props) {
         axiosWithAuth()
             .post('/api/auth/register', credentials)
                 .then(res => {
-                    console.log("SIGNUP POST REQUEST - RES; ", res)
-                    console.log("SIGNUP POST REQUEST - RES.DATA; ", res.data)
-                    push('/home')
+                    push('/')
 
                 })
                 .catch(err => {
                     console.log({err})
-                })
-
-        // axios.post("INSERT END POINT", credentials)
-        //     .then(res => {
-        //         console.log("Axios Login Post Request ", res)
-                // localStorage.setItem('user_id', res.data.user.user_id)
-                // localStorage.setItem('username', res.data.user.username)
-                // localStorage.setItem('email', res.data.user.email)
-                // localStorage.setItem('token', res.data.token)                        
-                // setCredentials({})
-                // push('/DETERMINE PATH & COMPONENT TO ROUTE TO AFTER SIGNUP OR LOGIN')
-            // })
-            // .catch(err => {
-            //     console.log(err)
-            // })        
+                })      
         }
 
     return (
@@ -64,10 +47,6 @@ function SignUpForm(props) {
                             <div>
                                 <input autoFocus type="text" name="username" id="username" onChange={handleChange} placeholder="Username"/>
                             </div>
-                            {/* <label>Email: </label>
-                            <div>
-                                <input type="email" name="email" id="email" onChange={handleChange} placeholder="Email"/>
-                            </div> */}
                             <label>Password: </label>
                             <div>
                                 <input type="password" name="password" id="password" onChange={handleChange} placeholder="Password"/>
