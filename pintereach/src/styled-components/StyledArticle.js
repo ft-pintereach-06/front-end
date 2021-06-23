@@ -5,12 +5,11 @@ const StyledArticle = styled.div`
     /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
     color: #ffffff; 
     position: relative;
-    min-height: 20vh;
     margin: 0;
+    width: 33%;
     display: flex;
-    flex-flow: row-wrap;
+    flex-direction: row;
     justify-content: space-around;
-    align-content: center;
     box-sizing: border-box;
     padding: 1%1%;
 
@@ -23,8 +22,8 @@ const StyledArticle = styled.div`
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
         padding: 5%5px;
-        max-width: 32%;
-        max-height: 250px;
+        max-width: 100%;
+        max-height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;

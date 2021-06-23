@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import axiosWithAuth from '../utils/AxiosWithAuth';
 import { fetchArticles } from '../actions/index';
 import fetchArticlesService from '../services/fetchArticlesService';
+import {StyledListCard} from '../styled-components/StyledList'
 
 function ArticleList(props) {
     const { articles } = props;
@@ -34,7 +35,7 @@ function ArticleList(props) {
     console.log("Articles :", articles)
 
     return (
-        <div>
+        <StyledListCard>
             {articles.map(article => <Article key={article.id} article={article} /> )}
             {/* {articles[0].map(article => <Article key={article.id} article={article} /> )} */}
 
@@ -58,7 +59,7 @@ function ArticleList(props) {
                         <p><b>Category:</b> {articles.category}</p>
                         <p><b>Importance:</b> {articles.article_importance}</p>} */}
 
-        </div>
+        </StyledListCard>
     )
 }
 
