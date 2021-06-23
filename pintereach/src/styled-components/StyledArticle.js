@@ -6,7 +6,7 @@ const StyledArticle = styled.div`
     color: #ffffff; 
     position: relative;
     min-height: 20vh;
-    margin: 0;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -24,8 +24,8 @@ const StyledArticle = styled.div`
         border-radius: 12px;
         padding: 2em;
         padding-bottom: 3em;
-        width: 250px;
-        height: 250px;
+        width: 350px;
+        height: 350px;
         display: flex;
         flex-direction: column;
         justify-content: center;
