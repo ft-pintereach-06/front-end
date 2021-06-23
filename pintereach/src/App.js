@@ -7,6 +7,7 @@ import SignUpForm from './components/SignUp';
 import Login from './components/Login';
 import Homepage from './components/Homepage';
 import ArticleForm from './components/ArticleForm';
+import NavBar from './components/NavBar';
 
 import './App.css';
 
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
+          <NavBar />      
           <h1>Pintereach</h1>
         </header>
         <Switch>
