@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 import { useHistory } from 'react-router'
-import axios from 'axios';
-// import axiosWithAuth from '../utils/AxiosWithAuth';
+// import axios from 'axios';
+import axiosWithAuth from '../utils/AxiosWithAuth';
 import { StyledLoginForm } from '../styled-components/StyledForm';
 
 const initialValues = {
@@ -26,8 +26,19 @@ function SignUpForm(props) {
         e.preventDefault()
         console.log("SUBMIT TRIGGERING")
         console.log(credentials)
-        push('/home')
-        // Insert end point for axios.post request
+
+        axiosWithAuth()
+            .post('/api/auth/register', credentials)
+                .then(res => {
+                    console.log("SIGNUP POST REQUEST - RES; ", res)
+                    console.log("SIGNUP POST REQUEST - RES.DATA; ", res.data)
+                    push('/home')
+
+                })
+                .catch(err => {
+                    console.log({err})
+                })
+
         // axios.post("INSERT END POINT", credentials)
         //     .then(res => {
         //         console.log("Axios Login Post Request ", res)
@@ -49,14 +60,14 @@ function SignUpForm(props) {
                     <form onSubmit={handleSubmit}>
                         <h2>Sign up</h2>
                         <div className="form-content">
-                            <label>Name: </label>
+                            <label>Username: </label>
                             <div>
-                                <input autoFocus type="text" name="username" id="username" onChange={handleChange} placeholder="Name"/>
+                                <input autoFocus type="text" name="username" id="username" onChange={handleChange} placeholder="Username"/>
                             </div>
-                            <label>Email: </label>
+                            {/* <label>Email: </label>
                             <div>
                                 <input type="email" name="email" id="email" onChange={handleChange} placeholder="Email"/>
-                            </div>
+                            </div> */}
                             <label>Password: </label>
                             <div>
                                 <input type="password" name="password" id="password" onChange={handleChange} placeholder="Password"/>
@@ -69,12 +80,11 @@ function SignUpForm(props) {
     )
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         isFetching: state.isFetching,
-//         error: state.error
-//     }
-// }
+const mapStateToProps = state => {
+    return {
+        isFetching: state.isFetching,
+        error: state.error
+    }
+}
 
-// export default connect(mapStateToProps)(SignUpForm);
-export default SignUpForm;
+export default connect(mapStateToProps)(SignUpForm);
