@@ -60,3 +60,4 @@ export const loginSuccessful = (credentials) => {
 export const deleteArticle = (article) => {
     return({type: DELETE_ARTICLE, payload: article})
 }
+

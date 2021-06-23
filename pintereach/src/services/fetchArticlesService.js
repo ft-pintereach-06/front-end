@@ -2,7 +2,7 @@ import axiosWithAuth from '../utils/AxiosWithAuth';
 
 const fetchArticlesService = () => {
     return axiosWithAuth()
-        .get('/api/articles/all')
+        .get('/api/articles/')
             .then((res) => {
                 console.log("fetchArticlesService: ", res);
                 return(res.data);

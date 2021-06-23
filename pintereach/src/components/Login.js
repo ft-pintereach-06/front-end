@@ -13,7 +13,6 @@ function Login(props) {
         password: ''
     })
 
-
     const handleChange = e => {
         setCredentials({
             ...credentials, 
@@ -21,37 +20,19 @@ function Login(props) {
         })
     }
 
-    // console.log(credentials)
-
     const handleLoginClick = e => {
         e.preventDefault()
-        console.log(credentials)
-        // push('/home')
         axiosWithAuth()
             .post('/api/auth/login', credentials)
             .then(res => {
-                console.log("Axios Login Post: ", res)
                 localStorage.setItem('token', res.data.token)
-                console.log("Local Storage Token: ", localStorage.token)
                 push('/home')
-                // axiosWithAuth()
-                //     .get('/api/articles/:id')
-                //     console.log(res)
-                //     .then(res => {
-                //         console.log(res)
-                //     props.loginSuccess(res.data)
-                //     localStorage.setItem('user_id', res.data.user_id)
-                //     localStorage.setItem('username', res.data.username)
-                //     localStorage.setItem('email', res.data.email)
                 })
             .catch(err => {
                 console.log(err)
             })
-            // push('/home')
         }
-        // .catch(err => {
-        //     console.log(err.message)
-    
+       
     const handleRegisterClick = e => {
         e.preventDefault()
         push('/SignUp')
