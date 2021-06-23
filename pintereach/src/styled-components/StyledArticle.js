@@ -2,16 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledArticle = styled.div`
-    /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+    /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
     color: #ffffff; 
     position: relative;
     min-height: 20vh;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-flow: row-wrap;
+    justify-content: space-around;
     align-content: center;
     box-sizing: border-box;
+    padding: 1%1%;
 
     .ArticleContainer {
         /* background: rgba(255, 255, 255, 0.1); */
@@ -21,10 +22,9 @@ const StyledArticle = styled.div`
         border-right: 1px solid rgba(255, 255, 255, 0.3);
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
-        padding: 2em;
-        padding-bottom: 3em;
-        width: 250px;
-        height: 250px;
+        padding: 5%5px;
+        max-width: 32%;
+        max-height: 250px;
         display: flex;
         flex-direction: column;
         justify-content: center;
