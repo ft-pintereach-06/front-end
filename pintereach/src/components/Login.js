@@ -21,7 +21,7 @@ function Login(props) {
         })
     }
 
-    console.log(credentials)
+    // console.log(credentials)
 
     const handleLoginClick = e => {
         e.preventDefault()

@@ -7,6 +7,8 @@ export const FETCH_FAIL = "FETCH_FAIL";
 export const ADD_ARTICLE = "ADD_ARTICLE";
 export const SET_ERROR = "SET_ERROR";
 export const LOGIN_SUCCESSFUL = "LOGIN_SUCCESSFUL";
+export const SET_ARTICLES = "SET_ARTICLES";
+export const DELETE_ARTICLE = "DELETE_ARTICLE";
 
 export const fetchArticles = () => {
     return (dispatch) => {
@@ -15,8 +17,8 @@ export const fetchArticles = () => {
 
         // Fetching Data From API
         axiosWithAuth()
-        .get('INSERT AXIOS END POINT')
-        .then(res => {
+        .get('/api/articles/all')
+        .then(res => { 
             // Successful Fetch
             dispatch(fetchSuccess(res.data))
         })
@@ -49,4 +51,12 @@ export const setError = (error) => {
 
 export const loginSuccessful = (credentials) => {
     return({type: LOGIN_SUCCESSFUL, payload: credentials})
+}
+
+// export const setArticles = (articles) => {
+//     return({type: SET_ARTICLES, payload: articles})
+// }
+
+export const deleteArticle = (article) => {
+    return({type: DELETE_ARTICLE, payload: article})
 }
