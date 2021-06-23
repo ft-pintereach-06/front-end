@@ -20,11 +20,12 @@ function App() {
           <h1>Pintereach</h1>
         </header>
         <Switch>
-          {/* Make Homepage a PrivateRoute */}
-          <Route path='/home' component={Homepage}/>
+          <PrivateRoute exact path='/home' component={Homepage} />
+          {/* <Route path='/home' component={Homepage}/> */}
           <Route path ='/signup' component={SignUpForm}/>
           <Route exact path='/' component={Login} />
-          <Route path ='/form' component={ArticleForm} />
+          {/* <Route path ='/form' component={ArticleForm} /> */}
+          <PrivateRoute exact path='/form' component={ArticleForm} />
         </Switch>
       </div>
     </Router>

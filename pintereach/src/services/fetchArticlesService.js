@@ -2,13 +2,13 @@ import axiosWithAuth from '../utils/AxiosWithAuth';
 
 const fetchArticlesService = () => {
     return axiosWithAuth()
-        .get('/ INSERT API END POINT')
+        .get('/api/articles/:id')
             .then((res) => {
                 console.log("fetchArticlesService: ", res);
                 return(res.data);
             })
             .catch((err) => {
-                console.log(err);
+                console.log({err});
             })
 }
 

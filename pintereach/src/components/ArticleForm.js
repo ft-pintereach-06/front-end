@@ -3,7 +3,7 @@ import { StyledLoginForm } from '../styled-components/StyledForm';
 import { useHistory } from 'react-router';
 
 // TO DO
-    // set up validation to not allow form to be submitted if fields are empty
+    // set up validation to not allow form to be submitted if fields are empty?
 
 const initialValues = {
     title: '',

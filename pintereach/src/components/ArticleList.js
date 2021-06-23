@@ -1,16 +1,29 @@
 import React, { useEffect } from 'react';
 import Article from './Article';
-import fetchArticlesService from '../services/fetchArticlesService';
+import { connect } from 'react-redux';
+import axiosWithAuth from '../utils/AxiosWithAuth';
+// import fetchArticlesService from '../services/fetchArticlesService';
 
 function ArticleList(props) {
-    // const { articles } = props;
+    const { articles } = props;
 
-    // useEffect on mount
-    // useEffect(() => {
-    //     fetchArticlesService().then((res) => {
-    //     setArticles(res)
-    //     })
-    // }, []);
+    useEffect(() => {
+        //  fetchArticlesService().then((res) => {
+        //  console.log("Fetching Articles: ", res)
+        //  })
+
+        axiosWithAuth()
+        .get('/api/articles/all')
+            .then((res) => {
+                console.log("Fetching Articles: ", res.data);
+                return(res.data);
+            })
+            .catch((err) => {
+                console.log({err});
+            })
+    }, []);
+
+    console.log("Local Storage Token: ", localStorage.token)
 
     return (
         <div>
@@ -21,13 +34,12 @@ function ArticleList(props) {
     )
 }
 
-// const mapStateToProps = state => {
-//     return {
+const mapStateToProps = state => {
+    return {
+        articles: state.articles
+    }
+}
 
-//     }
-// }
+export default connect(mapStateToProps)(ArticleList);
 
-// export default connect(mapStateToProps)(ArticleList);
-
-export default ArticleList;
 

@@ -1,6 +1,8 @@
-import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_ARTICLE, SET_ERROR } from './../actions/index';
+import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_ARTICLE, SET_ERROR, LOGIN_SUCCESSFUL } from './../actions/index';
 
 export const initialState = {
+    credentials: {},
+    registered: [],
     articles: [],
     isLoading: false,
     errorMessage: ''
@@ -39,6 +41,13 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: action.payload
+            }
+        case LOGIN_SUCCESSFUL:
+            return {
+                ...state,
+                isLoading: false,
+                registered: action.payload 
+
             }
         default: 
             return state;

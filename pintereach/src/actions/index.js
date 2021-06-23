@@ -1,5 +1,4 @@
-import axios from 'axios';
-// import axiosWithAuth from '../utils/AxiosWithAuth';
+import axiosWithAuth from '../utils/AxiosWithAuth';
 
 export const FETCH_START = "FETCH_START";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
@@ -7,6 +6,7 @@ export const FETCH_FAIL = "FETCH_FAIL";
 
 export const ADD_ARTICLE = "ADD_ARTICLE";
 export const SET_ERROR = "SET_ERROR";
+export const LOGIN_SUCCESSFUL = "LOGIN_SUCCESSFUL";
 
 export const fetchArticles = () => {
     return (dispatch) => {
@@ -14,7 +14,8 @@ export const fetchArticles = () => {
         dispatch(fetchStart());
 
         // Fetching Data From API
-        axios.get('INSERT AXIOS END POINT')
+        axiosWithAuth()
+        .get('INSERT AXIOS END POINT')
         .then(res => {
             // Successful Fetch
             dispatch(fetchSuccess(res.data))
@@ -44,4 +45,8 @@ export const addArticle = (article) => {
 
 export const setError = (error) => {
     return({type: SET_ERROR, payload: error})
+}
+
+export const loginSuccessful = (credentials) => {
+    return({type: LOGIN_SUCCESSFUL, payload: credentials})
 }

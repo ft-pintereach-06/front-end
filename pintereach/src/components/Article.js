@@ -40,10 +40,10 @@ function Article(props) {
                     <p><b>Importance:</b> {article.importance}</p> */}
 
                     {/* <p><b>ArticleTitle:</b>  Clinical Research Trial</p> */}
-                    <h2>Clinical Research Trial</h2>
+                    {/* <h2>Clinical Research Trial</h2>
                     <p><a href="www.clinicaltrials.org">www.clinicaltrials.org</a></p>
                     <p><b>Category:</b> Clinical Research</p>
-                    <p><b>Importance:</b> Medium</p>
+                    <p><b>Importance:</b> Medium</p> */}
 
                     <button onClick={handleDeleteClick}>Delete Article</button>
                 </div>  
