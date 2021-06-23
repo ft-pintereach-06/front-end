@@ -1,4 +1,4 @@
-import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_ARTICLE, SET_ERROR, LOGIN_SUCCESSFUL, SET_ARTICLES, DELETE_ARTICLE } from './../actions/index';
+import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_ARTICLE, SET_ERROR, LOGIN_SUCCESSFUL, DELETE_ARTICLE } from './../actions/index';
 
 export const initialState = {
     credentials: {},
@@ -46,12 +46,6 @@ const reducer = (state = initialState, action) => {
                 isLoading: false,
                 registered: action.payload 
             }
-        // case SET_ARTICLES:
-        //     return {
-        //         ...state,
-        //         articles: [...state.articles, action.payload]
-        //         // articles: [action.payload]
-        //     }
         case DELETE_ARTICLE:
             return {
                 ...state,
