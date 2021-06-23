@@ -8,6 +8,7 @@ export const ADD_ARTICLE = "ADD_ARTICLE";
 export const SET_ERROR = "SET_ERROR";
 export const LOGIN_SUCCESSFUL = "LOGIN_SUCCESSFUL";
 export const DELETE_ARTICLE = "DELETE_ARTICLE";
+export const SET_CREDENTIALS = "SET_CREDENTIALS";
 
 export const fetchArticles = () => {
     return (dispatch) => {
@@ -16,7 +17,7 @@ export const fetchArticles = () => {
 
         // Fetching Data From API
         axiosWithAuth()
-        .get('/api/articles/all')
+        .get('/api/articles/')
         .then(res => { 
             // Successful Fetch
             dispatch(fetchSuccess(res.data))
@@ -54,5 +55,9 @@ export const loginSuccessful = (credentials) => {
 
 export const deleteArticle = (article) => {
     return({type: DELETE_ARTICLE, payload: article})
+}
+
+export const setCredentials = (credentials) => {
+    return({type: SET_CREDENTIALS, payload: credentials})
 }
 

@@ -15,13 +15,14 @@ function Login(props) {
 
     const handleChange = e => {
         setCredentials({
-            ...credentials, 
+            ...credentials,
             [e.target.name]: e.target.value
         })
     }
 
     const handleLoginClick = e => {
         e.preventDefault()
+        console.log(credentials)
         axiosWithAuth()
             .post('/api/auth/login', credentials)
             .then(res => {
@@ -29,7 +30,7 @@ function Login(props) {
                 push('/home')
                 })
             .catch(err => {
-                console.log(err)
+                console.log({err})
             })
         }
        

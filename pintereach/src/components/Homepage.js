@@ -11,10 +11,17 @@ function Homepage() {
         push('/form')
     }
 
+    const handleLogOut = e => {
+        e.preventDefault()
+        localStorage.removeItem("token")
+        push('/')
+    }
+
     return (
         <div>
             <br></br>
             <br></br>
+            <button onClick={handleLogOut}>Log Out</button>
             <button onClick={handleFormClick}>Add Article</button>
             <h1>Article Board</h1> 
              
