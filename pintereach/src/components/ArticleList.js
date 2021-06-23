@@ -8,13 +8,14 @@ function ArticleList(props) {
     
     useEffect(() => {
         props.fetchArticles();
-        console.log("Fetching Articles: ", fetchArticles)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    console.log("TESTING", articles)
 
     return (
         <div>
             {articles.map(article => <Article key={article.id} article={article} /> )}
-            {/* {articles[0].map(article => <Article key={article.id} article={article} /> )} */}
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_ARTICLE, SET_ERROR, LOGIN_SUCCESSFUL, DELETE_ARTICLE } from './../actions/index';
+import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_ARTICLE, SET_ERROR, LOGIN_SUCCESSFUL, DELETE_ARTICLE, SET_CREDENTIALS } from './../actions/index';
 
 export const initialState = {
     credentials: {},
@@ -51,6 +51,12 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 articles: state.articles.filter(article=>(action.payload !== article.article_id))
             }
+        case SET_CREDENTIALS:
+            return {
+                ...state,
+                credentials: action.payload
+            }
+        
         default: 
             return state;
     }
