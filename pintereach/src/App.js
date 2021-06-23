@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar';
 
 import PrivateRoute from './components/PrivateRoute';
 
@@ -8,6 +7,7 @@ import SignUpForm from './components/SignUp';
 import Login from './components/Login';
 import Homepage from './components/Homepage';
 import ArticleForm from './components/ArticleForm';
+import NavBar from './components/NavBar';
 
 import './App.css';
 

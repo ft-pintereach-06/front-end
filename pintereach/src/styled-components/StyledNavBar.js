@@ -4,16 +4,12 @@ import styled from 'styled-components'
 const StyledNavBar = styled.div`
    text-align:center;
    width:100%;
-
-   .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid white;
-   }
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid white;
 
    .pintereach{
-    max-width: 50%fit-content;
+    max-width: 50%;
     text-decoration: none;
     background: red;
     background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
@@ -21,6 +17,7 @@ const StyledNavBar = styled.div`
     background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
     background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
     -webkit-background-clip: text;
+        background-clip: 0;
     -webkit-text-fill-color: transparent;
     font-size: 5vw;
    }
