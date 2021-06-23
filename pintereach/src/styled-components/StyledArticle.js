@@ -4,14 +4,20 @@ import styled from 'styled-components'
 const StyledArticle = styled.div`
     /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
     color: #ffffff; 
-    position: relative;
     margin: 0;
-    width: 33%;
+    max-width: 33%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: stretch;
     box-sizing: border-box;
     padding: 1%1%;
+    @media (max-width: 550px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
 
     .ArticleContainer {
         /* background: rgba(255, 255, 255, 0.1); */
@@ -23,7 +29,6 @@ const StyledArticle = styled.div`
         border-radius: 12px;
         padding: 5%5px;
         max-width: 100%;
-        max-height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
