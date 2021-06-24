@@ -5,7 +5,7 @@ const StyledArticle = styled.div`
     /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
     color: #ffffff; 
     margin: 0;
-    max-width: 33%;
+    width: 33%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,7 +29,9 @@ const StyledArticle = styled.div`
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
         padding: 5%5px;
-        padding-bottom: 3em;
+        padding-bottom: 1%;
+        white-space: normal;
+        overflow: hidden;
         width: 100%;
         display: flex;
         flex-direction: column;
