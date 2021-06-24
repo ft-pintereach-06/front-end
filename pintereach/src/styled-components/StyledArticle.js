@@ -12,10 +12,10 @@ const StyledArticle = styled.div`
     flex-wrap: wrap;
     align-content: stretch;
     box-sizing: border-box;
-    padding: 1%1%;
+    padding: 1%1%; 
+
     @media (max-width: 550px) {
-        flex-direction: row;
-        flex-wrap: nowrap;
+        max-width:100%;
     }
 
 
