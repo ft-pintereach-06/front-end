@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Article from './Article';
 import { connect } from 'react-redux';
 import { fetchArticles } from '../actions/index';
+import { StyledListCard } from '../styled-components/StyledList';
 
 function ArticleList(props) {
     const { articles } = props;
@@ -14,9 +15,9 @@ function ArticleList(props) {
     console.log("TESTING", articles)
 
     return (
-        <div>
+        <StyledListCard>
             {articles.map(article => <Article key={article.id} article={article} /> )}
-        </div>
+        </StyledListCard>
     )
 }
 

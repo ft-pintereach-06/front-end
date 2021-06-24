@@ -22,7 +22,6 @@ function Article(props) {
     }
 
     return (
-        <div>
             <StyledArticleCard>
                 <div className="ArticleContainer">
                     
@@ -34,7 +33,6 @@ function Article(props) {
                     <button onClick={handleDeleteClick}>Delete Article</button>
                 </div>  
             </StyledArticleCard>
-        </div>
     )
 }
 

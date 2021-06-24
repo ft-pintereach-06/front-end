@@ -15,10 +15,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <NavBar />      
-          <h1>Pintereach</h1>
-        </header>
+          <NavBar />
         <Switch>
           <PrivateRoute exact path='/home' component={Homepage} />
           <Route path ='/signup' component={SignUpForm}/>

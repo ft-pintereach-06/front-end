@@ -3,10 +3,16 @@ import styled from 'styled-components'
 
 const StyledNavBar = styled.div`
    text-align:center;
+   background-color: #282c34;
    width:100%;
    display: flex;
    justify-content: space-between;
    border-bottom: 1px solid white;
+
+   @media (max-width: 550px) {
+        justify-content: center;
+    }
+   
 
    .pintereach{
     max-width: 50%;
@@ -22,6 +28,9 @@ const StyledNavBar = styled.div`
     font-size: 5vw;
    }
 
+   nav {
+       padding: 1%1%;
+   }
    div .links-container {
        width: 50%fit-content;
    }
