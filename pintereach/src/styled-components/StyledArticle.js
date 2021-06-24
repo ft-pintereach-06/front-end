@@ -4,21 +4,15 @@ import styled from 'styled-components'
 const StyledArticle = styled.div`
     /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
     color: #ffffff; 
-<<<<<<< HEAD
     margin: 0;
     max-width: 33%;
-=======
-    position: relative;
-    min-height: 20vh;
-    margin-bottom: 20px;
->>>>>>> c50c21447529d5ddd97515221f6b27742fc75e95
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     align-content: stretch;
     box-sizing: border-box;
-    padding: 1%1%; 
+    padding: 1%1%;
 
     @media (max-width: 550px) {
         max-width:100%;
@@ -34,15 +28,9 @@ const StyledArticle = styled.div`
         border-right: 1px solid rgba(255, 255, 255, 0.3);
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
-<<<<<<< HEAD
         padding: 5%5px;
-        max-width: 100%;
-=======
-        padding: 2em;
         padding-bottom: 3em;
-        width: 350px;
-        height: 350px;
->>>>>>> c50c21447529d5ddd97515221f6b27742fc75e95
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
