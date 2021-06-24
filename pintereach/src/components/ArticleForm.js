@@ -5,9 +5,6 @@ import { connect } from 'react-redux';
 import axiosWithAuth from '../utils/AxiosWithAuth';
 import { addArticle } from '../actions';
 
-// TO DO
-    // set up validation to not allow form to be submitted if fields are empty?
-
 const initialValues = {
 }
 
@@ -26,7 +23,6 @@ function ArticleForm(props) {
         axiosWithAuth()
             .post('/api/articles/', article)
             .then(res => {
-                console.log("ADD ARTICLE POST REQUEST: ", res);
                 addArticle(res.data);
                 push('/home')
             })

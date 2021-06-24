@@ -21,10 +21,8 @@ function App() {
         </header>
         <Switch>
           <PrivateRoute exact path='/home' component={Homepage} />
-          {/* <Route path='/home' component={Homepage}/> */}
           <Route path ='/signup' component={SignUpForm}/>
           <Route exact path='/' component={Login} />
-          {/* <Route path ='/form' component={ArticleForm} /> */}
           <PrivateRoute exact path='/form' component={ArticleForm} />
         </Switch>
       </div>

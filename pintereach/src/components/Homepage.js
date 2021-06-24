@@ -12,12 +12,18 @@ function Homepage() {
         push('/form')
     }
 
+    const handleLogOut = e => {
+        e.preventDefault()
+        localStorage.removeItem("token")
+        push('/')
+    }
+
     return (
         <StyledHomeCard>
             <br></br>
             <br></br>
+            <button onClick={handleLogOut}>Log Out</button>
             <button onClick={handleFormClick}>Add Article</button>
-            {/* <p>------------------------------------------</p> */}
             <h1>Article Board</h1> 
                 <ArticleList />
         </StyledHomeCard>
