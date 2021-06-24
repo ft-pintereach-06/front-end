@@ -6,7 +6,7 @@ import { deleteArticle } from '../actions/index';
 
 function Article(props) {
 
-    const { articles, article } = props
+    const { article } = props
 
     const handleDeleteClick = e => {
         e.preventDefault();
@@ -26,7 +26,7 @@ function Article(props) {
                 <div className="ArticleContainer">
                     
                     <h2> {article.article_title} </h2>
-                    <a href={articles.url}>{article.article_url}</a>
+                    <a href={article.article_url} target="_blank" rel="noreferrer">{article.article_url}</a>
                     <p><b>Category:</b> {article.category}</p>
                     <p><b>Importance:</b> {article.article_importance}</p>
                     
@@ -36,10 +36,4 @@ function Article(props) {
     )
 }
 
-const mapStateToProps = state => {
-    return{
-        articles: state.articles
-    }
-}
-
-export default connect(mapStateToProps, {deleteArticle})(Article);
+export default connect(null, {deleteArticle})(Article);

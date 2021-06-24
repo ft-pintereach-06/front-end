@@ -23,9 +23,7 @@ function SignUpForm(props) {
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log("SUBMIT TRIGGERING")
-        console.log(credentials)
-
+        
         axiosWithAuth()
             .post('/api/auth/register', credentials)
                 .then(res => {
