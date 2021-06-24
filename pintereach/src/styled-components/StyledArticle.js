@@ -15,7 +15,7 @@ const StyledArticle = styled.div`
     padding: 1%1%;
 
     @media (max-width: 550px) {
-        max-width:100%;
+        width:100%;
     }
 
 
