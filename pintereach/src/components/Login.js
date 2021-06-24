@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { StyledLoginForm } from '../styled-components/StyledForm';
 import { connect } from 'react-redux';
+import { StyledLoginForm } from '../styled-components/StyledForm';
 import axiosWithAuth from '../utils/AxiosWithAuth';
 import { loginSuccessful } from '../actions/index';
 

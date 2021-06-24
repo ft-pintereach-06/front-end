@@ -25,7 +25,7 @@ function Homepage() {
             <button onClick={handleLogOut}>Log Out</button>
             <button onClick={handleFormClick}>Add Article</button>
             <h1>Article Board</h1> 
-                <ArticleList />
+            <ArticleList />
         </StyledHomeCard>
     )
 }

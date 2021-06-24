@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledArticle = styled.div`
-    /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
     color: #ffffff; 
     margin: 0;
     max-width: 33%;
@@ -20,8 +19,6 @@ const StyledArticle = styled.div`
 
 
     .ArticleContainer {
-        /* background: rgba(255, 255, 255, 0.1); */
-        /* backdrop-filter: blur(12px); */
         background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.3);
