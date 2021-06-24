@@ -6,7 +6,7 @@ import { deleteArticle } from '../actions/index';
 
 function Article(props) {
 
-    const { article } = props
+    const { articles, article } = props
 
     const handleDeleteClick = e => {
         e.preventDefault();
@@ -26,7 +26,7 @@ function Article(props) {
                 <div className="ArticleContainer">
                     
                     <h2> {article.article_title} </h2>
-                    <p><a href={article.url}>NEED TO FIX</a></p>
+                    <a href={articles.url}>{article.article_url}</a>
                     <p><b>Category:</b> {article.category}</p>
                     <p><b>Importance:</b> {article.article_importance}</p>
                     
