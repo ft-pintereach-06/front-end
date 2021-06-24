@@ -30,6 +30,8 @@ const StyledArticle = styled.div`
         border-radius: 12px;
         padding: 5%5px;
         padding-bottom: 3em;
+        white-space: normal;
+        overflow: hidden;
         width: 100%;
         display: flex;
         flex-direction: column;
